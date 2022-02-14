@@ -1,0 +1,112 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  img src="images/white-waves.png";
+}
+
+.container {
+  display: grid;
+    background-color:cornflowerblue;
+    /* <img src="images/white-waves.png" style="width: 100%;"> */
+    background: url(images/white-waves.png);
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header Nav Nav"
+      "MainPhotos MainPhotos TextAndAds TextAndAds"
+      "MainPhotos MainPhotos TextAndAds TextAndAds"
+      "MainPhotos MainPhotos TextAndAds TextAndAds"
+      "TextUnderPhotos TextUnderPhotos TextAndAds TextAndAds"
+      "Footer Footer Footer Footer";
+    }
+  .grid-item {
+    background-color: transparent;
+    color: darkblue;
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+    
+    }
+  .Header { 
+    grid-area: Header;
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Scheherazade New', serif; */
+    font-size: 400%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    font-weight: bold;
+    margin: auto;
+   }
+  
+  .Nav {
+    grid-area: Nav;
+    margin: auto;
+    font-size: xx-large;
+    float: right;
+         }
+
+  ul {
+    list-style-type: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 140%;
+    overflow: hidden;
+    float: right;
+      }
+  li {
+    float: left;
+    /* text-align: right; */
+  }
+  li a {
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+    }
+  a:hover {
+    color: lightskyblue;
+    transform: scale(1.4);
+    transform: translate(-15px, -15px);
+    transition-duration: 777ms;
+  }
+  .MainPhotos {
+    grid-area: MainPhotos;
+    font-family: 'Dancing Script', cursive;
+    font-size: large;
+    }
+ .MainPhotos > img {
+    object-fit: cover;
+    /* object-fit: scale-down; */
+    width: 100%;
+  }
+  .TextUnderPhotos {
+    grid-area: TextUnderPhotos;
+    font-family: 'Dancing Script', cursive;
+    font-size: large;
+    margin: auto;
+    }
+  
+  .TextAndAds {
+    grid-area: TextAndAds;
+    text-align: justify;
+    font-family: 'Dancing Script', cursive;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: large;
+    border-left: solid 1.5px lightgrey;
+        }
+  
+  .Footer {
+    grid-area: Footer;
+    border-style: outset;
+    font-size: large;
+    align-items: center;
+    align-content: center;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+ }
